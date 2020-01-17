@@ -1,16 +1,27 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <TopHeader />
+    <b-container fluid class="bv-example-row">
+      <!-- Content here -->
+
+      <router-view />
+    </b-container>
   </div>
 </template>
 
+<script>
+import TopHeader from "./components/TopHeader";
+
+export default {
+  components: {
+    TopHeader
+  }
+};
+</script>
+
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
